@@ -4,8 +4,6 @@ function generate_graph(json_file) {
     async: false
   });
   
-  console.log(json_file);
-  
   var graphJson = null;
   var maxWeight = 0;
   var color = d3.interpolateReds;
@@ -14,8 +12,6 @@ function generate_graph(json_file) {
   $.getJSON(json_file, function(json) {
     graphJson = json;
   });
-  
-  console.log(graphJson);
 
   var i = 0;
   graphJson.nodes.forEach(function(element)
