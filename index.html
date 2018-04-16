@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="networkx.js"></script>
+    <script src="graph.js"></script>
+  </head>
+  <body>
+    <div id='canvas' style="height: 400px;">
+    </div>
+    <div id='current_node'>
+    </div>
+    <script>
+    generate_graph("seventies_graph.json");
+    </script>
+  </body>
+</html>
