@@ -60,6 +60,7 @@ function generate_graph(json_file) {
       nodeAttr: {
           r: 8,
           title: function(d) {return d.data.id;},
+          label: function(d) {return d.data.id;},
           id: function(d) {
               return 'node-' + d.node; // assign unique ID
           }
@@ -70,7 +71,7 @@ function generate_graph(json_file) {
               return color(d.data.weight / maxWeight)
             }
             else {
-              return '#e65c00';
+              return '#2d5986';
             }
           },
           stroke: 'none'
@@ -95,7 +96,7 @@ function generate_graph(json_file) {
                   nodeColor = color(d.data.weight / maxWeight)
                 }
                 else {
-                  nodeColor = '#e65c00';
+                  nodeColor = '#2d5986';
                 }
               }
               d.data.color = nodeColor;
