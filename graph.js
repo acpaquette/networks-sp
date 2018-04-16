@@ -3,7 +3,7 @@ function generate_graph(json_file) {
   $.ajaxSetup({
     async: false
   });
-
+  
   var graphJson = null;
   var maxWeight = 0;
   var color = d3.interpolateReds;
