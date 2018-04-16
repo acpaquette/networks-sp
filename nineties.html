@@ -55,7 +55,7 @@
         <h5 class="w3-red" style="border-radius: 10px;">Selected Node Display</h5>
         <div id='current_node'></div>
       </div>
-      <div class="w3-third" style="position: absolute; right: 11%;">
+      <div class="w3-half">
         <h3>The Data</h3>
         <p>
           Above is a graph of the horror movies and horror movie tropes
@@ -73,5 +73,62 @@
       generate_graph("./tropes/nineties_graph.json");
     </script>
   </div>
+
+
+  <!-- Third Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey">
+    <div class="w3-content">
+      <h3>The Results</h3>
+      <div class="w3-half">
+        <p>
+        Most Valued Trope: <a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/BodyHorror">BodyHorror</a>
+        <br />
+        Most Used Trope: <a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/BodyHorror">BodyHorror</a>
+        <br />
+        Movie with the most tropes: <a href="http://www.imdb.com/title/tt0155975/?ref_=nv_sr_3">Psycho</a>
+        <br />
+        Highest Grossing Film: <a href="http://www.imdb.com/title/tt0185937/?ref_=nv_sr_1">TheBlairWitchProject</a>
+        <br />
+        Total number of tropes used: 167
+
+        <p>List of movies using the most valued Trope:</p>
+        <ul class='valued-tropes'>
+          <script>
+          var tropes = ['DeathBecomesHer', 'Species', 'JacobSLadder',
+                        'EventHorizon', 'BrideOfChucky', 'SleepyHollow',
+                        'AlienResurrection', 'TheFaculty', 'FromDuskTillDawn']
+          var htmlString = "";
+
+          tropes.forEach(function(trope){
+            htmlString += "<li>" + trope + "</li>";
+          });
+
+          $('.valued-tropes').html( htmlString );
+          </script>
+        </ul>
+        </p>
+      </div>
+      <div class="w3-half">
+
+        <p>List of tropes from the highest grossing film:</p>
+        <ul class="grossing-tropes">
+          <script>
+          var tropes = ['ApocalypticLog', 'EldritchAbomination', 'BloodyHandprint',
+                        'CreepyChild', 'CreepyDoll', 'DaylightHorror', 'FridgeHorror',
+                        'DontGoInTheWoods', 'EldritchLocation', 'GhostStory',
+                        'NothingIsScarier', 'DemonicPossession']
+          var htmlString = "";
+
+          tropes.forEach(function(trope){
+            htmlString += "<li>" + trope + "</li>";
+          });
+
+          $('.grossing-tropes').html( htmlString );
+          </script>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>

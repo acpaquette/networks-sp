@@ -56,7 +56,7 @@
         <div id='current_node'>
         </div>
       </div>
-      <div class="w3-third" style="position: absolute; right: 11%;">
+      <div class="w3-half">
         <h3>The Data</h3>
         <p>
           Above is a graph of the horror movies and horror movie tropes
@@ -73,5 +73,64 @@
       generate_graph("./tropes/eighties_graph.json");
     </script>
   </div>
+
+
+    <!-- Third Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey">
+      <div class="w3-content">
+        <h3>The Results</h3>
+        <div class="w3-half">
+          <p>
+          Most Valued Trope: <a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/FinalGirl">FinalGirl</a>
+          <br />
+          Most Used Trope: <a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/FinalGirl">FinalGirl</a>
+          <br />
+          Movie with the most tropes: <a href="http://www.imdb.com/title/tt0080761/?ref_=fn_al_tt_2">FridayThe13Th</a>
+          <br />
+          Highest Grossing Film: <a href="http://www.imdb.com/title/tt0087363/?ref_=nv_sr_1">Gremlins</a>
+          <br />
+          Total number of tropes used: 154
+
+          <p>List of movies using the most valued Trope:</p>
+          <ul class='valued-tropes'>
+            <script>
+            var tropes = ['GraduationDay', 'ANightmareOnElmStreet4TheDreamMaster',
+                          'FridayThe13ThPartIii', 'ANightmareOnElmStreet',
+                          'ANightmareOnElmStreet3DreamWarriors', 'FridayThe13ThPart2',
+                          'FridayThe13ThPartViiTheNewBlood', 'ANightmareOnElmStreet2FreddySRevenge',
+                          'FridayThe13ThTheFinalChapter', 'FridayThe13Th',
+                          'Halloween4TheReturnOfMichaelMyers', 'ANightmareOnElmStreet5TheDreamChild']
+            var htmlString = "";
+
+            tropes.forEach(function(trope){
+              htmlString += "<li>" + trope + "</li>";
+            });
+
+            $('.valued-tropes').html( htmlString );
+            </script>
+          </ul>
+          </p>
+        </div>
+        <div class="w3-half">
+
+          <p>List of tropes from the highest grossing film:</p>
+          <ul class="grossing-tropes">
+            <script>
+            var tropes = ['HorrorDoesntSettleForSimpleTuesday',
+                          'TheLittleShopThatWasntThereYesterday', 'NightmareFace',
+                          'NothingIsScarier', 'FridgeHorror']
+            var htmlString = "";
+
+            tropes.forEach(function(trope){
+              htmlString += "<li>" + trope + "</li>";
+            });
+
+            $('.grossing-tropes').html( htmlString );
+            </script>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

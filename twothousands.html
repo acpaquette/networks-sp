@@ -55,16 +55,16 @@
         <h5 class="w3-red" style="border-radius: 10px;">Selected Node Display</h5>
         <div id='current_node'></div>
       </div>
-      <div class="w3-third" style="position: absolute; right: 11%;">
+      <div class="w3-half">
         <h3>The Data</h3>
         <p>
           Above is a graph of the horror movies and horror movie tropes
           that relate to the top 50 movies released between 2000 - 2009.
-          We see that the "Body Horror" and "Final Girl" tropes from 
+          We see that the "Body Horror" and "Final Girl" tropes from
           previous decades still remain relevant. Popular franchises
           continue to thrive, and we begin to see crossover movies, such
           as "Freddy vs Jason", which starred characters from both the
-          "Friday the 13th" and "Nightmare on Elm Street" franchises. 
+          "Friday the 13th" and "Nightmare on Elm Street" franchises.
           This decade is where we start to see the most crossover between
           the action and horror genres, leaving movies like "I Am Legend"
           at the top of the horror charts.
@@ -75,5 +75,60 @@
       generate_graph("./tropes/twothousands_graph.json");
     </script>
   </div>
+
+  <!-- Third Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey">
+    <div class="w3-content">
+      <h3>The Results</h3>
+      <div class="w3-half">
+        <p>
+        Most Valued Trope: <a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/BodyHorror">BodyHorror</a>
+        <br />
+        Most Used Trope: <a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/FinalGirl">FinalGirl</a>
+        <br />
+        Movie with the most tropes: <a href="http://www.imdb.com/title/tt0391198/?ref_=nv_sr_1">TheGrudge</a>
+        <br />
+        Highest Grossing Film: <a href="http://www.imdb.com/title/tt0480249/?ref_=fn_al_tt_1">IAmLegend</a>
+        <br />
+        Total number of tropes used: 184
+
+        <p>List of movies using the most valued Trope:</p>
+        <ul class='valued-tropes'>
+          <script>
+          var tropes = ['HollowMan', 'Hellboy', 'SawV', 'TheOmen', 'Cloverfield',
+                        'WhatLiesBeneath', 'GhostRider', 'BladeIi', 'ParanormalActivity',
+                        'TheGrudge', 'HellboyIiTheGoldenArmy']
+          var htmlString = "";
+
+          tropes.forEach(function(trope){
+            htmlString += "<li>" + trope + "</li>";
+          });
+
+          $('.valued-tropes').html( htmlString );
+          </script>
+        </ul>
+        </p>
+      </div>
+      <div class="w3-half">
+
+        <p>List of tropes from the highest grossing film:</p>
+        <ul class="grossing-tropes">
+          <script>
+          var tropes = ['CreepyDoll', 'ZombieApocalypse', 'GhostCity',
+                        'NotUsingTheZWord', 'ItCanThink', 'NiceDayDeadlyNight',
+                        'SoleSurvivingScientist', 'SoundOnlyDeath', 'StakingTheLovedOne']
+          var htmlString = "";
+
+          tropes.forEach(function(trope){
+            htmlString += "<li>" + trope + "</li>";
+          });
+
+          $('.grossing-tropes').html( htmlString );
+          </script>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>
