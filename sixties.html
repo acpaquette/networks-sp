@@ -6,8 +6,8 @@
     <script src="https://d3js.org/d3-color.v1.min.js"></script>
     <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src="./networkx.js"></script>
-    <script src="./graph.js"></script>
+    <script src="./javascript/networkx.js"></script>
+    <script src="./javascript/graph.js"></script>
     <!-- CSS taken from W3 Schools templates -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -45,22 +45,37 @@
         <h1>Sixties Trope Graph</h1>
         <div id="canvas">
           <div id="legend">
-            <img id="legend_graphic" src="./legend.png" alt="Legends for coloring of the trope graph">
+            <img id="legend_graphic" src="./assets/legend.png" alt="Legends for coloring of the trope graph">
           </div>
         </div>
       </div>
     </div>
     <div class="w3-content">
       <div class="w3-half">
+        <h5 class="w3-red" style="border-radius: 10px;">Selected Node Display</h5>
         <div id='current_node'></div>
       </div>
       <div class="w3-third" style="position: absolute; right: 11%;">
+        <h3>The Data</h3>
         <p>
-          Above is a graph of the horror movies and horror movies tropes
-          Above is a graph of the horror movies and horror movies tropes
-          Above is a graph of the horror movies and horror movies tropes
-          Above is a graph of the horror movies and horror movies tropes
-          Above is a graph of the horror movies and horror movies tropes
+          Above is a graph of the horror movies and horror movie tropes
+          that relate to the top 5 movies released between 1960 - 1969.
+          Currently, due to IMDB not having records for the gross earnings of the
+          top 14 - 50 movies and TvTropes only having records for 5 of those 13, we
+          were only able to get data on 5 of the movies released in this era. While
+          this is a limited data set compared to the total number we were hoping to
+          look at, this era helps to define what this graph model looks like.
+          <br />
+          <hr>
+          <p>Sixties graph
+            <a href="https://github.com/acpaquette/networks-sp/blob/master/tropes/sixties_graph.json">json file.</a>
+          </p>
+          <p>Sixties IMDB movie ratings
+            <a href="https://github.com/acpaquette/networks-sp/blob/master/tropes/sixties/movie_list.json">json file.</a>
+          </p>
+          <p>Sixties movie tropes per movie
+            <a href="https://github.com/acpaquette/networks-sp/blob/master/tropes/sixties/">json file.</a>
+          </p>
         </p>
       </div>
     </div>

@@ -3,7 +3,7 @@ function generate_graph(json_file) {
   $.ajaxSetup({
     async: false
   });
-  
+
   var graphJson = null;
   var maxWeight = 0;
   var color = d3.interpolateReds;
@@ -107,13 +107,14 @@ function generate_graph(json_file) {
   // bind event handlers
   d3.selectAll('.node').on('click', function(d) {
       let htmlString = "";
-      htmlString += "<h3> Movie: " + d.data.id + "</h3>";
 
       if(d.G.node.get(d.node).type === 'trope') {
+        htmlString += "<h3>Trope: " + d.data.id + "</h3>";
         htmlString += " <a href=\"" + (d.G.node.get(d.node).site) + "\" target=\"_blank\">" + "TvTropes Link" + "</a>";
       }
       else {
-        htmlString += "<h4> Trope List </h4>";
+        htmlString += "<h3>Movie: " + d.data.id + "</h3>";
+        htmlString += "<h4>Trope List</h4>";
         htmlString += "<ul style=\"list-style-type: none;\">";
 
         d.G.neighbors(d.node).forEach(function(node) {

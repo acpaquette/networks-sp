@@ -6,8 +6,8 @@
     <script src="https://d3js.org/d3-color.v1.min.js"></script>
     <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src="./networkx.js"></script>
-    <script src="./graph.js"></script>
+    <script src="./javascript/networkx.js"></script>
+    <script src="./javascript/graph.js"></script>
     <!-- CSS taken from W3 Schools templates -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -45,16 +45,18 @@
         <h1>Seventies Trope Graph</h1>
         <div id="canvas">
           <div id="legend">
-            <img id="legend_graphic" src="./legend.png" alt="Legends for coloring of the trope graph">
+            <img id="legend_graphic" src="./assets/legend.png" alt="Legends for coloring of the trope graph">
           </div>
         </div>
       </div>
     </div>
     <div class="w3-content">
       <div class="w3-half">
+        <h5 class="w3-red" style="border-radius: 10px;">Selected Node Display</h5>
         <div id='current_node'></div>
       </div>
       <div class="w3-third" style="position: absolute; right: 11%;">
+        <h3>The Data</h3>
         <p>
           Above is a graph of the horror movies and horror movies tropes
           Above is a graph of the horror movies and horror movies tropes
