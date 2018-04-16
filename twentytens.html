@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,11 +20,15 @@
     .fa-anchor,.fa-coffee {font-size:200px}
     </style>
     <!--  -->
+
   </head>
-  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-    <h1>HORROR MOVIE <br /> TROPE ANALYSIS <br /> 1960 - 2018</h1>
+  <body>
+    <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:24px 16px">
+    <h1>Twenty Tens<br />Horror Movie<br />Trope Graph</h1>
   </header>
-  <div class="w3-container w3-red w3-center" style="padding:16px 16px">
+
+  <div class="w3-container w3-red w3-center" style="padding:16px">
     <a id="nav_item" href="./index.html">Home</a>
     <a id="nav_item" href="./sixties.html">60's</a>
     <a id="nav_item" href="./seventies.html">70's</a>
@@ -37,11 +42,31 @@
   <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
       <div class="w3-one">
+        <h1>Twenty Tens Trope Graph</h1>
+        <div id="canvas">
+          <div id="legend">
+            <img id="legend_graphic" src="./legend.png" alt="Legends for coloring of the trope graph">
+          </div>
+        </div>
       </div>
     </div>
     <div class="w3-content">
-      <div class="w3-one">
+      <div class="w3-half">
+        <div id='current_node'></div>
+      </div>
+      <div class="w3-third" style="position: absolute; right: 11%;">
+        <p>
+          Above is a graph of the horror movies and horror movies tropes
+          Above is a graph of the horror movies and horror movies tropes
+          Above is a graph of the horror movies and horror movies tropes
+          Above is a graph of the horror movies and horror movies tropes
+          Above is a graph of the horror movies and horror movies tropes
+        </p>
+      </div>
     </div>
+    <script>
+      generate_graph("./tropes/twentytens_graph.json");
+    </script>
   </div>
   </body>
 </html>

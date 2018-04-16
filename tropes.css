@@ -1,0 +1,29 @@
+#canvas
+{
+  width: auto;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  overflow: auto;
+  height: 600px;
+}
+
+#nav_item
+{
+  padding: 5%;
+}
+
+#legend
+{
+  position: absolute;
+  right: 12%;
+  top: 117%;
+}
+
+#legend_graphic
+{
+  /* 50 + 30 + 1 */
+  height: 81px;
+  /* 150 + 30 + 1 */
+  width: 181px;
+}

@@ -107,20 +107,21 @@ function generate_graph(json_file) {
   // bind event handlers
   d3.selectAll('.node').on('click', function(d) {
       let htmlString = "";
-      htmlString += d.data.id;
+      htmlString += "<h3> Movie: " + d.data.id + "</h3>";
 
       if(d.G.node.get(d.node).type === 'trope') {
-        console.log(d.G.degree(d.node));
         htmlString += " <a href=\"" + (d.G.node.get(d.node).site) + "\" target=\"_blank\">" + "TvTropes Link" + "</a>";
       }
       else {
-        htmlString += "<br />";
-        htmlString += "<ul>";
+        htmlString += "<h4> Trope List </h4>";
+        htmlString += "<ul style=\"list-style-type: none;\">";
+
         d.G.neighbors(d.node).forEach(function(node) {
           htmlString += "<li>"
           htmlString += "<a href=\"" + (d.G.node.get(node).site) + "\" target=\"_blank\">" + (d.G.node.get(node).id) + "</a>"
           htmlString += "</li>";
         });
+
         htmlString += "</ul>";
       }
 
